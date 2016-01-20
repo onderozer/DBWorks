@@ -31,7 +31,7 @@ public class Loginwindow extends JFrame {
         gbc.insets = new Insets(3,3,3,3);
 
         JLabel adLbl = new JLabel("Kullanıcı Adı :");
-        JLabel soyadLbl = new JLabel("Soyad :");
+        JLabel sifrelbl = new JLabel("Şifre :");
         JLabel dummyLbl = new JLabel("     ");
         JTextField adTxt = new JTextField();
         JPasswordField soyadTxt = new JPasswordField();
@@ -46,7 +46,7 @@ public class Loginwindow extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 1;
-        mainPanel.add(soyadLbl,gbc);
+        mainPanel.add(sifrelbl,gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 2;
