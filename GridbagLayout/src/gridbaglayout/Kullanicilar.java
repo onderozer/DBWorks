@@ -15,151 +15,104 @@ public class Kullanicilar extends JFrame {
 
     private void initGUI() {
 
-        this.setTitle("Uyelik Formu");
+        this.setTitle("Kullanıcı Ekleme Formu");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setPreferredSize(new Dimension(250,200));
 
         JPanel mainpanel = new JPanel();
-        mainpanel.setLayout(new GridBagLayout());
         this.getContentPane().add(mainpanel);
-
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(3, 3, 3, 3);
-
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        mainpanel.add(panel1(),gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        mainpanel.add(panel2(),gbc);
+        mainpanel.add(panel1());
 
         this.pack();
         this.setVisible(true);
-
-
     }
 
     private JPanel panel1()
     {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
-        panel.setBorder(BorderFactory.createLineBorder(null));
-
         GridBagConstraints gbc = new GridBagConstraints();
+
         gbc.insets = new Insets(2,2,2,2);
 
+        JLabel kullaniciAdilbl = new JLabel("Kullanıcı Adı :");
+        JLabel sifrelbl = new JLabel("Şifre :");
+        JLabel adilbl = new JLabel("Adı :");
+        JLabel soyadilbl = new JLabel("Soyadı :");
+        JLabel yetkilbl = new JLabel("Yetki :");
+        JTextField kullaniciAditxt = new JTextField();
+        JPasswordField sifrepsw = new JPasswordField();
+        JTextField aditxt = new JTextField();
+        JTextField soyaditxt = new JTextField();
+        JComboBox yetkicmb = new JComboBox();
+        JButton okbtn = new JButton("Tamam");
+        JButton cancelbtn = new JButton("Çıkış");
+
         gbc.gridx = 0;
         gbc.gridy = 0;
-        panel.add(new JLabel("Ad                    "),gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(kullaniciAdilbl,gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 0;
-        panel.add(new JLabel("soyad                 "),gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        panel.add(new JLabel("yaş   "),gbc);
-
-        gbc.gridx = 3;
-        gbc.gridy = 0;
-        panel.add(new JLabel("boy"),gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(kullaniciAditxt,gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy =1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextField(),gbc);
+        panel.add(sifrelbl,gbc);
 
         gbc.gridx = 1;
-        gbc.gridy = 1;
+        gbc.gridy =1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextField(),gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextField(),gbc);
-
-        gbc.gridx = 3;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextField(),gbc);
+        panel.add(sifrepsw,gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 2;
-        panel.add(new JLabel("Adres"),gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 3;
-        gbc.gridwidth = 4;
+        gbc.gridy =2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextField(),gbc);
+        panel.add(adilbl,gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy =2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(aditxt,gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 4;
-        gbc.gridwidth = 1;
-        panel.add(new JButton("Listeye Ekle"),gbc);
+        gbc.gridy =3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(soyadilbl,gbc);
 
-        gbc.gridx = 2;
-        gbc.gridy = 4;
-        gbc.gridwidth = 1;
-        panel.add(new JButton("+"),gbc);
+        gbc.gridx = 1;
+        gbc.gridy =3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(soyaditxt,gbc);
 
-        gbc.gridx = 3;
-        gbc.gridy = 4;
-        gbc.gridwidth = 1;
-        panel.add(new JButton("-"),gbc);
+        gbc.gridx = 0;
+        gbc.gridy =4;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(yetkilbl,gbc);
 
+        gbc.gridx = 1;
+        gbc.gridy =4;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(yetkicmb,gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy =5;
+        panel.add(okbtn,gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy =5;
+        panel.add(cancelbtn,gbc);
         return panel;
-
-    }
-
-    private JPanel panel2()
-    {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-        panel.setBorder(BorderFactory.createLineBorder(null));
-
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(2,2,2,2);
-
-
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.gridwidth = 4;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextArea(10,20),gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.gridwidth = 1;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel.add(new JTextField(10),gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.gridwidth = 1;
-        panel.add(new JButton("Ara"),gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 1;
-        gbc.gridwidth = 1;
-        panel.add(new JButton("dosyayı kaydet"),gbc);
-
-        gbc.gridx = 3;
-        gbc.gridy = 1;
-        gbc.gridwidth = 1;
-        panel.add(new JButton("Kopyala"),gbc);
-
-        return panel;
-
     }
 
 
     public static void main(String[] args) {
         Kullanicilar u = new Kullanicilar();
         u.setLocationRelativeTo(null);
-        u.pack();
-        u.setVisible(true);
+        //u.pack();
+        //u.setVisible(true);
     }
 }
