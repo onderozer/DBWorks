@@ -107,12 +107,4 @@ public class Kullanicilar extends JFrame {
         panel.add(cancelbtn,gbc);
         return panel;
     }
-
-
-    public static void main(String[] args) {
-        Kullanicilar u = new Kullanicilar();
-        u.setLocationRelativeTo(null);
-        //u.pack();
-        //u.setVisible(true);
-    }
 }

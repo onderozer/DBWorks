@@ -91,9 +91,4 @@ public class Loginwindow extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-        Loginwindow lg = new Loginwindow();
-        lg.pack();
-        lg.setVisible(true);
-    }
 }
