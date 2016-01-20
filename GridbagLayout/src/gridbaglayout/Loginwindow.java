@@ -30,7 +30,7 @@ public class Loginwindow extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(3,3,3,3);
 
-        JLabel adLbl = new JLabel("Ad :");
+        JLabel adLbl = new JLabel("Kullanıcı Adı :");
         JLabel soyadLbl = new JLabel("Soyad :");
         JLabel dummyLbl = new JLabel("     ");
         JTextField adTxt = new JTextField();
